@@ -69,7 +69,7 @@ function generatePDF() {
     const pageCount = doc.internal.getNumberOfPages();
     for (let i = 1; i <= pageCount; i++) {
         doc.setPage(i);
-        doc.text(Page ${i} of ${pageCount}, doc.internal.pageSize.getWidth() - 20, doc.internal.pageSize.getHeight() - 10);
+        doc.text(`Page ${i} of ${pageCount}`, doc.internal.pageSize.getWidth() - 50, doc.internal.pageSize.getHeight() - 10);
     }
 
     doc.save('roster.pdf');
