@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Pilot Roster System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>GARG AVIATION LTD</h1>
+    <h2>Student Pilot Roster System</h2>
+    <form id="rosterForm">
+        <label for="srNo">Sr. No.:</label>
+        <input type="number" id="srNo" name="srNo" required><br><br>
+
+        <label for="instructor">Instructor:</label>
+        <input type="text" id="instructor" name="instructor" required><br><br>
+
+        <label for="trainee">Trainee:</label>
+        <input type="text" id="trainee" name="trainee" required><br><br>
+
+        <label for="aircraftReg">A/C Regs:</label>
+        <input type="text" id="aircraftReg" name="aircraftReg" required><br><br>
+
+        <label for="reportingTime">Reporting Time:</label>
+        <input type="time" id="reportingTime" name="reportingTime" required><br><br>
+
+        <button type="button" onclick="addRosterEntry()">Add Entry</button>
+    </form>
+
+    <h2>Roster</h2>
+    <table id="rosterTable">
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Instructor</th>
+                <th>Trainee</th>
+                <th>A/C Regs</th>
+                <th>Reporting Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Roster entries will be added here -->
+        </tbody>
+    </table>
+
+    <button onclick="generatePDF()">Download PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
